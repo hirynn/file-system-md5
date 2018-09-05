@@ -29,6 +29,7 @@
 // string.h for memcpy.
 #include <stdio.h>
 #include <string.h>
+#include <string>
 
 #pragma region MD5 defines
 // Constants for MD5Transform routine.
@@ -323,7 +324,7 @@ public:
 		int pos;
 
 		for (pos = 0; pos < 16; pos++)
-			sprintf_s(digestChars + (pos * 2), sizeof(digestChars + (pos * 2)), "%02x", digestRaw[pos]);
+			sprintf(digestChars + (pos * 2), "%02x", digestRaw[pos]);
 	}
 
 
